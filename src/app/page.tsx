@@ -140,7 +140,7 @@ export default function Home() {
       <div className=" flex flex-col bg-slate-200 min-h-screen justify-center p-6 text-black gap-6">
         <p className="uppercase font-light">get in touch</p>
         <h3 className="text-4xl font-bold">
-          Let's provide you with working solutions.
+          Let us provide you with working solutions.
         </h3>
         <p className=" font-light">
           Reach out to us for more information about our services, or to
