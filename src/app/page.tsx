@@ -1,6 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
+import ContactForm from "./components/ContactForm";
+import ServicesSlider from "./components/ServicesSlider";
+import OurTeam from "./components/OurTeam";
 export default function Home() {
+  const newLocal = (
+    <Image src={"/img/home_bg.jpg"} alt="Picture of the author" fill />
+  );
   return (
     <main className="flex min-h-screen flex-col items-center justify-between w-screen bg-white">
       {/* home */}
@@ -62,7 +69,10 @@ export default function Home() {
         {/* about image */}
         <div className=" h-80 w-full bg-[url('/img/about_img.jpg')] relative overflow-clip bg-cover">
           <div className=" h-1/2 w-1/2 bg-green-400 absolute right-2 -bottom-8 rotate-12"></div>
-          <div className=" h-2/5 w-1/2 bg-gray-100 absolute right-0 bottom-0"></div>
+          <div className=" h-2/5 w-1/2 bg-gray-100 absolute right-0 bottom-0 p-6">
+            <p className="font-bold text-2xl">50+</p>
+            <p className="uppercase font-thin">combined years of experience</p>
+          </div>
         </div>
       </div>
       {/*  our mission */}
@@ -77,64 +87,40 @@ export default function Home() {
         </p>
       </div>
       {/* services */}
-      <div className="flex flex-col min-h-screen items-start px-8 py-24 gap-6 bg-gray-100 w-full text-black">
-        <p className="font-thin uppercase">main directions</p>
-        <h3 className="text-6xl font-bold">Services.</h3>
+      <div className=" flex w-screen gap-12 relative  flex-nowrap overflow-scroll bg-gray-100">
+        <h1 className=" text-4xl uppercase font-bold text-gray-700 whitespace-nowrap ">
+          Retirement and pension
+        </h1>
+        <h1 className=" text-4xl uppercase font-bold text-white whitespace-nowrap drop-shadow-[0px_0px_0.5px_rgba(0,0,0.5)]">
+          Human resources services
+        </h1>
+        <h1 className=" text-4xl uppercase font-bold text-gray-700  whitespace-nowrap">
+          Tech Services
+        </h1>
+        <h1 className=" text-4xl uppercase font-bold text-white drop-shadow-[0px_0px_0.5px_rgba(0,0,0.5)] whitespace-nowrap ">
+          Insurance
+        </h1>
+      </div>
+      <div className="flex flex-col items-start px-8 py-24 gap-6 bg-gray-100 w-full text-black">
+        <div>
+          <p className="font-thin uppercase">main directions</p>
+          <h3 className="text-4xl font-bold">Services.</h3>
+        </div>
         <p>We offer a wide array of services, catering to different fields:</p>
-        <div className="flex gap-6">
-          <div className="btn btn-outline rounded-full w-12 h-12 relative">
-            <VscArrowLeft />
-          </div>
-          <div className="btn btn-outline rounded-full w-12 h-12 relative">
-            <VscArrowRight />
-          </div>
-        </div>
-        {/* services carousel */}
-        <div className="w-full h-96 carousel ">
-          <div className="w-full h-full carousel-item">
-            <div className="flex flex-col gap-6 justify-end p-2">
-              <Image
-                src="/img/letter-r.png"
-                alt=""
-                width={80}
-                height={80}
-                className=" my-2"
-              />
 
-              <p className="font-bold">Retirement and Pension Services</p>
-              <p>
-                We provide comprehensive retirement and pension consultancy
-                services
-              </p>
-              <div className="flex gap-4 items-center">
-                <div className="btn btn-outline h-12 w-12 rounded-full relative">
-                  <VscArrowRight className=" -rotate-45" />
-                </div>
-                <p className="uppercase font-mono text-sm">read more</p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full h-full bg-yellow-300  carousel-item">
-            Our HR services are designed to drive your business towards greater
-            success
-          </div>
-          <div className="w-full h-full bg-red-300  carousel-item">
-            From ICT support, web design, to software development, we provide a
-            range of ICT services.
-          </div>
-          <div className="w-full h-full bg-yellow-950  carousel-item">
-            we offer robust insurance consultancy services across all classes of
-            general insurance policies.
-          </div>
-        </div>
+        {/* services carousel */}
+        <ServicesSlider />
       </div>
       {/* team */}
       <div
         id="team"
         className="flex flex-col items-start justify-center min-h-screen w-full p-8 gap-6 bg-gray-100 text-black"
       >
-        <p className="font-thin uppercase">the avengers</p>
+        <p className="font-thin uppercase">working miracles</p>
         <h3 className="text-4xl font-bold">Meet Our Team.</h3>
+        <br />
+        {/* team list */}
+        <OurTeam />
       </div>
       {/* contact */}
       <div className=" flex flex-col bg-slate-200 min-h-screen justify-center p-6 text-black gap-6">
@@ -161,9 +147,7 @@ export default function Home() {
           <a href=""> Instagram</a>
         </div>
         {/* contact form */}
-        <form className="flex flex-col gap-4">
-          <input className="" />
-        </form>
+        <ContactForm />
       </div>
     </main>
   );
