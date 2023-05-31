@@ -12,9 +12,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between w-screen bg-white">
       {/* home */}
       {/* /Todo made tint */}
-      <div className="flex flex-col p-6 justify-center w-screen h-screen  gap-10 bg-[url('/img/home_bg.jpg')] bg-center bg-no-repeat bg-cover text-white ">
+      <div className="flex flex-col p-6 justify-center w-screen h-screen  gap-10 bg-[url('/img/home_bg.jpg')] bg-center bg-no-repeat bg-cover text-white relative ">
+        <div className=" absolute h-full w-full bg-[rgba(0,0,0,0.6)] left-0 top-0"></div>
         {/* Todo add parallax */}
-        <div className="">
+        <div className=" z-10 flex flex-wrap gap-8">
           <p className=" text-lg font-thin ">Premier consultancy firm</p>
           <h3 className="text-4xl font-bold ">
             Welcome to RAIB Consultants Et’el.
@@ -52,7 +53,10 @@ export default function Home() {
         </div>
       </div>
       {/* about */}
-      <div className="flex flex-col items-start justify-center w-full min-h-screen p-6 bg-white text-black gap-8">
+      <div
+        className="flex flex-col items-start justify-center w-full min-h-screen p-6 bg-white text-black gap-8"
+        id="about"
+      >
         <h3 className="text-xl font-thin">About Us</h3>
         <p>
           At RAIB Consultants Et’el Nig. Ltd, we believe in harnessing the power

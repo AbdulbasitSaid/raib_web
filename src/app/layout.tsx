@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -15,10 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* nav bar */}
-      {/* <div className=" bg-emerald-200">
-        <h1>Navbar</h1>
-      </div> */}
+      <Navbar />
       <body className={inter.className}>{children}</body>
       <footer className=" bg-gray-100 flex flex-col p-8 gap-8 text-gray-400">
         <div>
