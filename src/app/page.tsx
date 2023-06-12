@@ -4,6 +4,7 @@ import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 import ContactForm from "./components/ContactForm";
 import ServicesSlider from "./components/ServicesSlider";
 import OurTeam from "./components/OurTeam";
+import { Alert } from "./components/Alert";
 export default function Home() {
   const newLocal = (
     <Image src={"/img/home_bg.jpg"} alt="Picture of the author" fill />
