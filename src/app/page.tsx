@@ -5,6 +5,8 @@ import ContactForm from "./components/ContactForm";
 import ServicesSlider from "./components/ServicesSlider";
 import OurTeam from "./components/OurTeam";
 import { Alert } from "./components/Alert";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatAppClient from "./components/WhatAppClient";
 export default function Home() {
   const newLocal = (
     <Image src={"/img/home_bg.jpg"} alt="Picture of the author" fill />
@@ -153,6 +155,7 @@ export default function Home() {
         </div>
         {/* contact form */}
         <ContactForm />
+        <WhatAppClient />
       </div>
     </main>
   );
